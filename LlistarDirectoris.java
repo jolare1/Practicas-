@@ -40,13 +40,13 @@ public class LlistarDirectoris
                 			{
                 				File examinarNivel2 = new File("C:\\Users\\MiSeñor\\Documents\\" + listado[i] + "\\" + listadoNivel1[j] + "\\" + listadoNivel2[k]);
                 				if(examinarNivel2.isDirectory())
-                					System.out.println("		DIRECTORIO:\t" + listadoNivel2[k]);
+                					System.out.println("\t\tDIRECTORIO:\t" + listadoNivel2[k]);
                 				else 
-                					System.out.println("		FICHERO:\t" + listadoNivel2[k]);
+                					System.out.println("\t\tFICHERO:\t" + listadoNivel2[k]);
                 			}
                 		}
                 		else 
-                            System.out.println("	FICHERO:\t" + listadoNivel1[j]);	
+                            System.out.println("\tFICHERO:\t" + listadoNivel1[j]);	
                 	}
                 }
             }
