@@ -1,5 +1,5 @@
 import java.sql.*;
-
+//LA he cagao y tengo que vovler a subirlo-.--
 import com.sun.swing.internal.plaf.basic.resources.basic_fr;
 import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
@@ -40,15 +40,22 @@ public class AccesoDatosPt3 {
 		}
 	}
   public void getDatabaseMetaData() {
-      dbmd = con.getMetaData();
-      String productName = dbmd.getDatabaseProductName();
-      String driverName = dbmd.getDriverName();
-      String url = dbmd.getURL();
-      String userName = dbmd.getUserName();
-      System.out.println("META INFORMACIÓ DE LA BASE DE DADES: NOM: " + productName + "DRIVER: " + driverName + "URL: " + url + "USUARI: " + userName);
+      try {
+	      dbmd = con.getMetaData();
+      	      String productName = dbmd.getDatabaseProductName();
+              String driverName = dbmd.getDriverName();
+              String url = dbmd.getURL();
+              String userName = dbmd.getUserName();
+              System.out.println("META INFORMACIÓ DE LA BASE DE DADES: NOM: " + productName + "DRIVER: " + driverName + "URL: " + url + "USUARI: 
+  	   } catch (Exception e) {
+	 	System.out.println("Error");
+      }
   }
      
   public void getDatabaseTableData() {
+  	try {
+		
+	}
       rs = dbmd.getTables(null, "basedas", null, null);
       String catalegName = rs.getString(catàleg);
       String esquemaName = rs.getString(esquema);
